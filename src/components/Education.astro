@@ -1,0 +1,50 @@
+---
+const coursework = [
+  "Statistics & non-parametric statistics",
+  "Data analysis and reporting",
+  "Micro-economics",
+  "Web development",
+  "Numerical methods",
+  "Linear algebra",
+  "Database systems",
+  "Real analysis",
+];
+---
+<section class="wrap" id="education">
+  <br>
+  <h2>Education</h2>
+  <article>
+    <h3>Applied Mathematics with Computing</h3>
+    <p class="muted">
+      Universiti Tunku Abdul Rahman (UTAR) &middot; Major: Mathematics &middot;
+      Minor: Programming
+    </p>
+    <p>Coursework:</p>
+    <ul>
+      {coursework.map((course) => <li>{course}</li>)}
+    </ul>
+  </article>
+</section>
+
+<style>
+  h3 {
+    font-family: var(--serif);
+    font-size: 18px;
+    margin: 0 0 4px;
+  }
+  ul {
+    margin: 0;
+    padding-left: 18px;
+    columns: 2;
+    column-gap: 24px;
+  }
+  li {
+    margin-bottom: 4px;
+    break-inside: avoid;
+  }
+  @media (max-width: 500px) {
+    ul {
+      columns: 1;
+    }
+  }
+</style>

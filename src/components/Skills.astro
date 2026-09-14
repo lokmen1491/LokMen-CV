@@ -1,0 +1,38 @@
+---
+const skills = [
+  "Excel (Power Query, pivot tables, formulas, VBA)",
+  "Word",
+  "Google Docs",
+  "Canva",
+  "SQL",
+  "Power BI",
+  "React (currently learning)",
+];
+---
+<section class="wrap" id="skills">
+  <br>
+  <h2>Skills</h2>
+  <ul class="skill-list">
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+</section>
+
+<style>
+  .skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 24px;
+  }
+  .skill-list li {
+    padding-left: 14px;
+    border-left: 2px solid var(--accent);
+  }
+  @media (max-width: 500px) {
+    .skill-list {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
